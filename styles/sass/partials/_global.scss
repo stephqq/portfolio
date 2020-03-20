@@ -33,9 +33,12 @@ body {
 
 .innerWrapper {
     max-width: calc(1400px / 2);
-    min-width: 500px;
     width: 50%;
     margin: 0 auto;
+}
+
+section {
+    margin: 150px 0;
 }
 
 button {

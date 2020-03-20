@@ -1,0 +1,41 @@
+.skills {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    li {
+        flex: 0 1 calc(100% / 5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &:hover p,
+        &:hover .svgFill,
+        &:hover i {
+            opacity: 1;
+            fill: $black;
+            color: $black;
+        }
+    }
+
+    p, svg, i, .svgFill {
+        transition: all .5s;
+    }
+
+    p {
+        margin-top: 10px;
+        opacity: 0;
+    }
+
+    svg, i {
+        color: $gray;
+        font-size: 8rem;
+    }
+
+    .svgFill {
+        fill: $gray;
+    }
+}

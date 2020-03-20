@@ -205,9 +205,12 @@ body {
 
 .innerWrapper {
   max-width: calc(1400px / 2);
-  min-width: 500px;
   width: 50%;
   margin: 0 auto;
+}
+
+section {
+  margin: 150px 0;
 }
 
 button {
@@ -255,13 +258,9 @@ header h3 {
   font-size: 1.8rem;
 }
 
-section {
-  margin: 100px 0;
-}
-
 section h2 {
   font-size: 3.6rem;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 
 section blockquote {
@@ -274,7 +273,7 @@ section blockquote span {
 }
 
 header {
-  height: 100vh;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,4 +352,58 @@ header .textContainer button:not(:first-of-type) {
       flex-basis: calc(100% / 3);
   padding-left: 30px;
   font-weight: 600;
+}
+
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% / 5);
+          flex: 0 1 calc(100% / 5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.skills li:hover p,
+.skills li:hover .svgFill,
+.skills li:hover i {
+  opacity: 1;
+  fill: #29292b;
+  color: #29292b;
+}
+
+.skills p, .skills svg, .skills i, .skills .svgFill {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.skills p {
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.skills svg, .skills i {
+  color: #919191;
+  font-size: 8rem;
+}
+
+.skills .svgFill {
+  fill: #919191;
 }
