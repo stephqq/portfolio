@@ -1,0 +1,26 @@
+.aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+        flex-basis: 100%;
+    }
+
+    &__text {
+        flex-basis: calc(100% / 3 * 2);
+        padding-right: 40px;
+        border-right: 2px solid $black;
+        margin-bottom: 25px;
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    blockquote {
+        flex-basis: calc(100% / 3);
+        padding-left: 30px;
+        font-weight: 600;
+    }
+}

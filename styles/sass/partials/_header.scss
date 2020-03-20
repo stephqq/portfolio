@@ -1,0 +1,38 @@
+header {
+    height: 100vh;
+    display: flex;
+
+    .header__imgContainer {
+        align-self: flex-end;
+        margin-left: 90px;
+        margin-bottom: 65px;
+        filter: saturate(65%);
+        position: relative;
+        left: 35px;
+    }
+
+    .header__contentContainer {
+        border: 15px solid $black;
+        width: 650px;
+        border-top: none;
+        position: relative;
+        right: 40px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .textContainer {
+        height: 500px;
+        margin-bottom: 50px;
+        padding-left: 125px;
+        padding-right: 125px;
+
+        span {
+            display: block;
+        }
+
+        button:not(:first-of-type) {
+            margin-left: 30px;
+        }
+    }
+}
