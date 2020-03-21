@@ -14,6 +14,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: $black;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -41,7 +46,8 @@ section {
     margin: 150px 0;
 }
 
-button {
+button,
+.likeAButton {
     border: none;
     border-bottom: 2px solid $black;
     background-color: $white;
