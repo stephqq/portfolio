@@ -1,14 +1,21 @@
 .aboutMe {
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 
-    h2 {
-        flex-basis: 100%;
+    .flexContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flexContainer2 {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__text {
-        flex-basis: calc(100% / 3 * 2);
+        width: calc(100% / 3 * 2);
         padding-right: 40px;
         border-right: 2px solid $black;
         margin-bottom: 25px;
@@ -19,7 +26,7 @@
     }
 
     blockquote {
-        flex-basis: calc(100% / 3);
+        width: calc(100% / 3);
         padding-left: 30px;
         font-weight: 600;
     }

@@ -1,5 +1,6 @@
 header {
     height: 95vh;
+    margin-bottom: 5vh;
     display: flex;
 
     .header__imgContainer {
@@ -35,4 +36,10 @@ header {
             margin-left: 30px;
         }
     }
+}
+
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

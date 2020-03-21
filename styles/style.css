@@ -214,11 +214,7 @@ body {
   margin: 0 auto;
 }
 
-section {
-  margin: 150px 0;
-}
-
-button,
+button:not(.hamburger),
 .likeAButton {
   border: none;
   border-bottom: 2px solid #29292b;
@@ -229,7 +225,7 @@ button,
   padding-bottom: 5px;
 }
 
-button i,
+button:not(.hamburger) i,
 .likeAButton i {
   padding-left: 7px;
 }
@@ -285,6 +281,7 @@ section blockquote span {
 
 header {
   height: 95vh;
+  margin-bottom: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,25 +327,45 @@ header .textContainer button:not(:first-of-type) {
   margin-left: 30px;
 }
 
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .aboutMe {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutMe .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.aboutMe .flexContainer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.aboutMe h2 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
 .aboutMe__text {
-  -ms-flex-preferred-size: calc(100% / 3 * 2);
-      flex-basis: calc(100% / 3 * 2);
+  width: calc(100% / 3 * 2);
   padding-right: 40px;
   border-right: 2px solid #29292b;
   margin-bottom: 25px;
@@ -359,10 +376,23 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .aboutMe blockquote {
-  -ms-flex-preferred-size: calc(100% / 3);
-      flex-basis: calc(100% / 3);
+  width: calc(100% / 3);
   padding-left: 30px;
   font-weight: 600;
+}
+
+.skills {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skills ul {
@@ -420,7 +450,9 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .portfolio {
-  height: 90vh;
+  height: 80vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
   position: relative;
 }
 
@@ -443,7 +475,7 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .portfolio .textContainer {
-  width: 535px;
+  width: 675px;
   padding-right: 161px;
 }
 
@@ -459,22 +491,26 @@ header .textContainer button:not(:first-of-type) {
   position: absolute;
   z-index: 10;
   max-width: 500px;
-  top: 100px;
+  top: 50px;
   right: -190px;
+}
+
+.portfolio__imgContainer img {
   -webkit-filter: drop-shadow(5px 5px 5px #919191);
           filter: drop-shadow(5px 5px 5px #919191);
 }
 
-.portfolio ul {
+.portfolio ul.tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.portfolio ul li {
+.portfolio ul.tags li {
   background: #29292b;
   color: white;
   font-size: 1.4rem;
@@ -482,11 +518,136 @@ header .textContainer button:not(:first-of-type) {
   padding: 0 5px;
 }
 
-.portfolio ul li:not(:nth-of-type(4n+1)) {
+.portfolio ul.tags li:not(:first-of-type) {
   margin-left: 20px;
 }
 
-.portfolio ul li:nth-child(n+5) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.portfolio nav {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+}
+
+.portfolio nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio nav ul button {
+  color: #919191;
+  border-bottom: none;
+}
+
+.portfolio nav ul li:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.portfolio nav .active {
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #29292b;
+  border-bottom: 2px solid #29292b;
+}
+
+.contactForm {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactForm form {
+  width: 100%;
+}
+
+.contactForm input, .contactForm textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #29292b;
+  color: inherit;
+  font-family: inherit;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 15px 0;
+  resize: none;
+}
+
+.contactForm input::-webkit-input-placeholder, .contactForm textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #29292b;
+}
+
+.contactForm input:-ms-input-placeholder, .contactForm textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #29292b;
+}
+
+.contactForm input::-ms-input-placeholder, .contactForm textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #29292b;
+}
+
+.contactForm input::placeholder, .contactForm textarea::placeholder {
+  opacity: 1;
+  color: #29292b;
+}
+
+.contactForm input:required, .contactForm textarea:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contactForm input:focus:invalid, .contactForm textarea:focus:invalid {
+  border-bottom: 2px solid #919191;
+}
+
+.contactForm input:placeholder-shown + label, .contactForm textarea:placeholder-shown + label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.contactForm textarea {
+  height: 150px;
+}
+
+.contactForm label {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 10px 0 20px 0;
+  display: inline-block;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 15px solid #29292b;
+  border-bottom: none;
+  height: 20vh;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 4rem;
+}
+
+footer ul li:not(:last-of-type) {
+  margin-right: 25px;
 }

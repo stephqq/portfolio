@@ -1,5 +1,7 @@
 .portfolio {
-    height: 90vh;
+    height: 80vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
     position: relative;
 
     &__contentContainer {
@@ -15,7 +17,7 @@
     }
 
     .textContainer {
-        width: 535px;
+        width: 675px;
         padding-right: 161px;
 
         p {
@@ -31,15 +33,19 @@
         position: absolute;
         z-index: 10;
         max-width: 500px;
-        top: 100px;
+        top: 50px;
         right: -190px;
-        filter: drop-shadow(5px 5px 5px $gray);
+        
+        img {
+            filter: drop-shadow(5px 5px 5px $gray);
+        }
     }
 
-    ul {
+    ul.tags {
         display: flex;
         flex-wrap: wrap;
         margin-top: 20px;
+        margin-bottom: 20px;
 
         li {
             background: $black;
@@ -49,13 +55,34 @@
             padding: 0 5px;
         }
 
-        li:not(:nth-of-type(4n+1)) {
+        li:not(:first-of-type) {
             margin-left: 20px;
         }
+    }
 
-        li:nth-child(n+5) {
-            margin-top: 20px;
-            margin-bottom: 20px;
+    nav {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+
+        ul {
+            display: flex;
+
+            button {
+                color: $gray;
+                border-bottom: none;
+            }
+
+            li:not(:last-of-type) {
+                margin-right: 20px;
+            }
+        }
+
+        .active {
+            padding-right: 15px;
+            padding-left: 15px;
+            color: $black;
+            border-bottom: 2px solid $black;
         }
     }
 }

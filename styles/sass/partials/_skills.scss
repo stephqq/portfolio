@@ -1,4 +1,9 @@
 .skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     ul {
         display: flex;
         flex-wrap: wrap;

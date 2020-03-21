@@ -1,0 +1,15 @@
+footer {
+    @include flexCenter;
+    border: 15px solid $black;
+    border-bottom: none;
+    height: 20vh;
+
+    ul {
+        display: flex;
+        font-size: 4rem;
+
+        li:not(:last-of-type) {
+            margin-right: 25px;
+        }
+    }
+}

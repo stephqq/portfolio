@@ -42,11 +42,7 @@ body {
     margin: 0 auto;
 }
 
-section {
-    margin: 150px 0;
-}
-
-button,
+button:not(.hamburger),
 .likeAButton {
     border: none;
     border-bottom: 2px solid $black;

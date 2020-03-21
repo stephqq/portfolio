@@ -1,0 +1,48 @@
+.contactForm {
+    height: 80vh;
+    @include flexCenter;
+
+    form {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid $black;
+        color: inherit;
+        font-family: inherit;
+        transition: all .3s;
+        padding: 15px 0;
+        resize: none;
+
+        &::placeholder {
+            opacity: 1;
+            color: $black;
+        }
+
+        &:required {
+            box-shadow: none;
+        }
+
+        &:focus:invalid {
+            border-bottom: 2px solid $gray;
+        }
+
+        &:placeholder-shown + label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    label {
+        transition: all .3s;
+        padding: 10px 0 20px 0;
+        display: inline-block;
+    }
+}
