@@ -16,7 +16,7 @@
         align-items: center;
     }
 
-    .textContainer {
+    &__textContainer {
         width: 675px;
         padding-right: 161px;
 
@@ -61,10 +61,6 @@
     }
 
     nav {
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-
         ul {
             display: flex;
 
@@ -83,6 +79,7 @@
             padding-left: 15px;
             color: $black;
             border-bottom: 2px solid $black;
+            transition: all .3s;
         }
     }
 }

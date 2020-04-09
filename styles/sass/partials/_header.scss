@@ -7,9 +7,6 @@ header {
     .header__imgContainer {
         align-self: flex-end;
         margin-left: 12rem;
-        @include mq('desktop', max) {
-            margin-left: 7rem;
-        }
         margin-bottom: 6.5rem;
         filter: saturate(65%);
         width: 500px;
@@ -22,9 +19,6 @@ header {
         position: absolute;
         height: 100%;
         left: calc(500px + 3.5rem);
-        @include mq('desktop', max) {
-            left: 500px;
-        }
         display: flex;
         align-items: flex-end;
     }
@@ -34,10 +28,6 @@ header {
         margin-bottom: 5rem;
         padding-left: 12rem;
         padding-right: 10rem;
-        @include mq('desktop', max) {
-            padding-left: 9rem;
-            padding-right: 7rem;
-        }
 
         span {
             display: block;
@@ -53,57 +43,17 @@ header {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 20;
 }
 
-@media (max-width: 1180px) {
-    header {
-        .header__imgContainer {
-            width: 450px;
-        }
-
-        .header__contentContainer {
-            left: 450px;
-        }
-
-        .textContainer {
-            height: 450px;
-        }
-    }
-}
-
-@media (max-width: 1050px) {
-    header {
-        .header__imgContainer {
-            width: 425px;
-        }
-
-        .header__contentContainer {
-            left: 425px;
-        }
-
-        .textContainer {
-            height: 425px;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        .header__imgContainer {
-            margin-left: 3rem;
-            width: 400px;
-        }
-
-        .header__contentContainer {
-            left: 275px;
-            width: 55%;
-        }
-
-        .textContainer {
-            height: 400px;
-            padding-left: 4rem;
-            padding-right: 4rem;
-            text-align: right;
-        }
-    }
+.mainNav {
+    display: none;
+    transition: display .3s;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    height: 100vh;
+    background: $white;
 }

@@ -44,6 +44,14 @@
                 <span class="hamburger-inner"></span>
             </span>
         </button>
+        <nav class="mainNav">
+            <ul>
+                <li><a href="#aboutSection">about</a></li>
+                <li><a href="#skillsSection">skills</a></li>
+                <li><a href="#portfolioSection">portfolio</a></li>
+                <li><a href="#contactSection">contact</a></li>
+            </ul>
+        </nav>
         <div class="header__imgContainer" data-aos="slide-right" data-aos-once="true" data-aos-duration="1500">
             <img src="./assets/skimg.jpg" alt="headshot of stephanie kerr">
         </div>
@@ -55,15 +63,17 @@
                 <h2>Web Developer</h2>
                 <h3>Passionate about leveraging technology to create a great user experience. And cats. <i
                         class="fas fa-paw" aria-hidden="true"></i></h3>
-                <button type="button">Download CV <i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></button>
-                <button type="button">Contact me <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></button>
+                <button type="button" class="resume">Download CV <i class="fas fa-long-arrow-alt-down"
+                        aria-hidden="true"></i></button>
+                <button type="button" class="contactButton">Contact me <i class="fas fa-long-arrow-alt-right"
+                        aria-hidden="true"></i></button>
             </div>
             <!--./textContainer-->
         </div>
         <!--./header__contentContainer-->
     </header>
     <main class="innerWrapper">
-        <section class="aboutMe">
+        <section class="aboutMe" id="aboutSection">
             <h2>About me</h2>
             <div class="flexContainer">
                 <div class="aboutMe__text">
@@ -80,11 +90,13 @@
                 </blockquote>
             </div>
             <div class="flexContainer2">
-                <button type="button">Download CV <i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></button>
-                <button type="button">Portfolio <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></button>
+                <button type="button" class="resume">Download CV <i class="fas fa-long-arrow-alt-down"
+                        aria-hidden="true"></i></button>
+                <button type="button" class="portfolioButton">Portfolio <i class="fas fa-long-arrow-alt-right"
+                        aria-hidden="true"></i></button>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skillsSection">
             <h2>What I can do</h2>
             <ul>
                 <li>
@@ -158,49 +170,45 @@
                 </li>
             </ul>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolioSection">
             <h2>My portfolio</h2>
+            <nav class="portfolioNav">
+                <ul>
+                    <li><button class="active toggleProject" type="button">01</button></li>
+                    <li><button type="button" class="toggleProject">02</button></li>
+                    <li><button type="button" class="toggleProject">03</button></li>
+                    <li><button type="button" class="toggleProject">04</button></li>
+                    <li><button type="button" class="toggleProject">05</button></li>
+                </ul>
+            </nav>
             <div class="portfolio__contentContainer">
-                <div class="textContainer">
-                    <a href="https://stephqq.github.io/stephanieKerrProjectThree/" target="_blank"
-                        rel="noopener noreferrer">
-                        <h3>Kitty Clicker</h3>
+                <div class="portfolio__textContainer">
+                    <a href="https://stephqq.github.io/thinkMindful/" target="_blank" rel="noopener noreferrer">
+                        <h3>Think Mindful</h3>
                     </a>
                     <ul class="tags">
-                        <li>jQuery</li>
+                        <li>React</li>
                         <li>JavaScript</li>
                         <li>HTML5</li>
                         <li>Firebase</li>
-                        <li>Sass</li>
                         <li>CSS3</li>
                     </ul>
-                    <p>Accessible, interactive game where the user clicks or taps a kitty as many times as they can for
-                        30 seconds.</p>
-                    <p>jQuery was used to manipulate the DOM and Firebase was used to provide a real-time
-                        leaderboard.</p>
-                    <a href="https://github.com/stephqq/kittyClicker" class="likeAButton" target="_blank"
+                    <p>A SPA built in React with CRUD functionality, Think Mindful allows the user to keep a thought
+                        record journal for therapy. </p>
+                    <p>Firebase was used for authentication and a real-time database.</p>
+                    <a href="https://github.com/stephqq/thinkMindful" class="likeAButton" target="_blank"
                         rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
-                    <a href="https://stephqq.github.io/kittyClicker/" class="likeAButton" target="_blank"
-                        rel="noopener noreferrer">view live <i class="fas fa-paw" aria-hidden="true"></i></a>
+                    <a href="https://stephqq.github.io/thinkMindful/" class="likeAButton" target="_blank"
+                        rel="noopener noreferrer">view live <i class="fas fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="portfolio__imgContainer">
-                <a href="https://stephqq.github.io/stephanieKerrProjectThree/" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="./assets/mockupKC.png" alt="mock up of kitty clicker on the screen of a macbook">
-                    <nav class="portfolioNav">
-                        <ul>
-                            <li><button class="active" type="button">01</button></li>
-                            <li><button type="button">02</button></li>
-                            <li><button type="button">03</button></li>
-                            <li><button type="button">04</button></li>
-                            <li><button type="button">05</button></li>
-                        </ul>
-                    </nav>
+                <a href="https://stephqq.github.io/thinkMindful/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/mockupTM.png" alt="mock up of think mindful on the screen of a macbook">
                 </a>
             </div>
         </section>
-        <section class="contactForm">
+        <section class="contactForm" id="contactSection">
             <form method="POST" action="http://www.focuspocus.io/magic/6212d57f934dfdf6ae8539ebe604ed6d">
                 <h2>Get in touch</h2>
                 <div class="formGroup">
