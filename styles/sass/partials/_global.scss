@@ -31,13 +31,13 @@ body {
 }
 
 .outerWrapper {
-    max-width: 1400px;
+    max-width: 1440px;
     width: 95%;
     margin: 0 auto;
 }
 
 .innerWrapper {
-    max-width: calc(1400px / 2);
+    max-width: calc(1440px / 2);
     width: 50%;
     margin: 0 auto;
 }
@@ -46,7 +46,7 @@ button:not(.hamburger),
 .likeAButton {
     border: none;
     border-bottom: 2px solid $black;
-    background-color: $white;
+    background-color: transparent;
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 600;

@@ -5,9 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephanie Kerr, Frontend Web Developer</title>
+    <!-- search metadata -->
+    <meta name="description" content="">
+    <meta name="robots" content="index, nofollow">
+    <meta name="author" content="Stephanie Kerr">
+    <!-- twitter metadata -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stephqqmore">
+    <meta name="twitter:title" content="Stephanie Kerr, Frontend Web Developer">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!-- linkedin and facebook metadata -->
+    <meta property="og:url" content="https://stephaniekerr.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Stephanie Kerr, Frontend Web Developer" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700|Sen:400,700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/7e17416451.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/aos.css" />
     <link rel="stylesheet" href="./styles/hamburgers.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -19,18 +36,19 @@
                 <span class="hamburger-inner"></span>
             </span>
         </button>
-        <div class="header__imgContainer">
+        <div class="header__imgContainer" data-aos="slide-right" data-aos-once="true" data-aos-duration="1500">
             <img src="./assets/skimg.jpg" alt="headshot of stephanie kerr">
         </div>
         <!--./header__imgContainer-->
-        <div class="header__contentContainer">
+        <div class="header__contentContainer" data-aos="flip-left" data-aos-once="true" data-aos-duration="2000"
+            data-aos-delay="1000">
             <div class="textContainer">
                 <h1><span>Hello, I am</span>Stephanie Kerr</h1>
                 <h2>Web Developer</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ab necessitatibus harum eos esse,
-                    ex omnis nam quaerat repudiandae.</h3>
-                <button>Download CV <i class="fas fa-long-arrow-alt-down"></i></button>
-                <button>Contact me <i class="fas fa-long-arrow-alt-right"></i></button>
+                <h3>Passionate about leveraging technology to create a great user experience. And cats. <i
+                        class="fas fa-paw" aria-hidden="true"></i></h3>
+                <button type="button">Download CV <i class="fas fa-long-arrow-alt-down"></i></button>
+                <button type="button">Contact me <i class="fas fa-long-arrow-alt-right"></i></button>
             </div>
             <!--./textContainer-->
         </div>
@@ -196,28 +214,38 @@
             </form>
         </section>
     </main>
-    <footer class="innerWrapper">
-        <ul class="social">
-            <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"
-                        aria-hidden="true"></i><span class="visuallyHidden"></span></a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"
-                        aria-hidden="true"></i><span class="visuallyHidden"></span></a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"
-                        aria-hidden="true"></i><span class="visuallyHidden"></span></a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"
-                        aria-hidden="true"></i><span class="visuallyHidden"></span></a>
-            </li>
-        </ul>
+    <footer>
+        <section class="innerWrapper" data-aos="slide-up" data-aos-once="true" data-aos-duration="1000"
+            data-aos-anchor-placement="bottom-bottom">
+            <ul class="social">
+                <li>
+                    <a href="https://github.com/stephqq" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github" aria-hidden="true"></i><span class="visuallyHidden">github</span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/stephqqmore" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-twitter" aria-hidden="true"></i><span
+                            class="visuallyHidden">twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kerrstephanie/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin" aria-hidden="true"></i><span
+                            class="visuallyHidden">linkedin</span></a>
+                </li>
+                <li>
+                    <a href="mailto:hello@stephaniekerr.io" target="_blank" rel="noopener noreferrer"><i
+                            class="fas fa-envelope" aria-hidden="true"></i><span class="visuallyHidden">email</span></a>
+                </li>
+            </ul>
+            <p>&copy; 2020 Stephanie Kerr</p>
+        </section>
     </footer>
 
+    <script src="./js/aos.js"></script>
     <script src="./js/scripts.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

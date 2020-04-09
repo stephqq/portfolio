@@ -1,12 +1,16 @@
 footer {
-    @include flexCenter;
-    border: 15px solid $black;
-    border-bottom: none;
-    height: 20vh;
+    section {
+        @include flexCenter;
+        flex-direction: column;
+        border: 15px solid $black;
+        border-bottom: none;
+        min-height: 15vh;
+    }
 
     ul {
         display: flex;
         font-size: 4rem;
+        padding-bottom: 1rem;
 
         li:not(:last-of-type) {
             margin-right: 25px;

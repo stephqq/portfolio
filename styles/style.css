@@ -203,13 +203,13 @@ body {
 }
 
 .outerWrapper {
-  max-width: 1400px;
+  max-width: 1440px;
   width: 95%;
   margin: 0 auto;
 }
 
 .innerWrapper {
-  max-width: calc(1400px / 2);
+  max-width: calc(1440px / 2);
   width: 50%;
   margin: 0 auto;
 }
@@ -218,7 +218,7 @@ button:not(.hamburger),
 .likeAButton {
   border: none;
   border-bottom: 2px solid #29292b;
-  background-color: white;
+  background-color: transparent;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 600;
@@ -244,13 +244,13 @@ h1 span {
   text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 header h2, header h3 {
   font-family: "Sen", sans-serif;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 header h2 {
@@ -263,7 +263,7 @@ header h3 {
 
 section h2 {
   font-size: 4rem;
-  margin-bottom: 45px;
+  margin-bottom: 4.5rem;
 }
 
 section h3 {
@@ -279,31 +279,42 @@ section blockquote span {
   color: white;
 }
 
+footer p {
+  font-size: 1.4rem;
+}
+
 header {
   height: 95vh;
   margin-bottom: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 header .header__imgContainer {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-left: 90px;
-  margin-bottom: 65px;
+  margin-left: 12rem;
+  margin-bottom: 6.5rem;
   -webkit-filter: saturate(65%);
           filter: saturate(65%);
-  position: relative;
-  left: 35px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 1247px) {
+  header .header__imgContainer {
+    margin-left: 7rem;
+  }
 }
 
 header .header__contentContainer {
   border: 15px solid #29292b;
-  width: 650px;
+  width: 50%;
   border-top: none;
-  position: relative;
-  right: 40px;
+  position: absolute;
+  height: 100%;
+  left: calc(500px + 3.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,11 +323,24 @@ header .header__contentContainer {
           align-items: flex-end;
 }
 
+@media only screen and (max-width: 1247px) {
+  header .header__contentContainer {
+    left: 500px;
+  }
+}
+
 header .textContainer {
   height: 500px;
-  margin-bottom: 50px;
-  padding-left: 125px;
-  padding-right: 125px;
+  margin-bottom: 5rem;
+  padding-left: 12rem;
+  padding-right: 10rem;
+}
+
+@media only screen and (max-width: 1247px) {
+  header .textContainer {
+    padding-left: 9rem;
+    padding-right: 7rem;
+  }
 }
 
 header .textContainer span {
@@ -324,13 +348,54 @@ header .textContainer span {
 }
 
 header .textContainer button:not(:first-of-type) {
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+}
+
+@media (max-width: 1180px) {
+  header .header__imgContainer {
+    width: 450px;
+  }
+  header .header__contentContainer {
+    left: 450px;
+  }
+  header .textContainer {
+    height: 450px;
+  }
+}
+
+@media (max-width: 1050px) {
+  header .header__imgContainer {
+    width: 425px;
+  }
+  header .header__contentContainer {
+    left: 425px;
+  }
+  header .textContainer {
+    height: 425px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .header__imgContainer {
+    margin-left: 3rem;
+    width: 400px;
+  }
+  header .header__contentContainer {
+    left: 275px;
+    width: 55%;
+  }
+  header .textContainer {
+    height: 400px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: right;
+  }
 }
 
 .aboutMe {
@@ -626,7 +691,7 @@ header .textContainer button:not(:first-of-type) {
   display: inline-block;
 }
 
-footer {
+footer section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,9 +701,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 15px solid #29292b;
   border-bottom: none;
-  height: 20vh;
+  min-height: 15vh;
 }
 
 footer ul {
@@ -646,6 +715,7 @@ footer ul {
   display: -ms-flexbox;
   display: flex;
   font-size: 4rem;
+  padding-bottom: 1rem;
 }
 
 footer ul li:not(:last-of-type) {
