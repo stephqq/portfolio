@@ -35,12 +35,14 @@ body {
     max-width: 1440px;
     width: 95%;
     margin: 0 auto;
+    border: 1px solid palevioletred;
 }
 
 .innerWrapper {
     max-width: calc(1440px / 2);
     width: 50%;
     margin: 0 auto;
+    border: 1px solid bisque;
 }
 
 button:not(.hamburger),
@@ -52,8 +54,41 @@ button:not(.hamburger),
     font-size: 1.4rem;
     font-weight: 600;
     padding-bottom: 5px;
+    transition: all .5s;
 
     i {
         padding-left: 7px;
+    }
+
+    &:hover i,
+    &:focus i {
+        animation: 2s ease-in .2s infinite activeState;
+    }
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+
+    &:focus {
+        left: 0;
+    }
+}
+
+@keyframes activeState {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

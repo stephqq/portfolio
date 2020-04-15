@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Stephanie Kerr, Frontend Web Developer">
     <meta name="twitter:description"
         content="Passionate about leveraging technology to create a great user experience. And cats.">
-    <meta name="twitter:image" content="./assets/skimgsmaller.png">
+    <meta name="twitter:image" content="https://stephaniekerr.io/assets/skimgsmaller.png">
     <!-- linkedin and facebook metadata -->
     <meta property="og:url" content="https://stephaniekerr.io" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Stephanie Kerr, Frontend Web Developer" />
     <meta property="og:description"
         content="Passionate about leveraging technology to create a great user experience. And cats." />
-    <meta property="og:image" content="./assets/skimgsmaller.png" />
+    <meta property="og:image" content="https://stephaniekerr.io/assets/skimgsmaller.png" />
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
@@ -38,6 +38,7 @@
 </head>
 
 <body class="outerWrapper">
+    <a href="#mainContent" class="skipLink">Skip to main content.</a>
     <header>
         <button class="hamburger hamburger--spring" type="button" aria-label="menu" aria-controls="navigation">
             <span class="hamburger-box">
@@ -46,10 +47,12 @@
         </button>
         <nav class="mainNav">
             <ul>
+                <li aria-hidden="true"><i class="fas fa-paw"></i></li>
                 <li><a href="#aboutSection">about</a></li>
                 <li><a href="#skillsSection">skills</a></li>
                 <li><a href="#portfolioSection">portfolio</a></li>
                 <li><a href="#contactSection">contact</a></li>
+                <li aria-hidden="true"><i class="fas fa-paw"></i></li>
             </ul>
         </nav>
         <div class="header__imgContainer" data-aos="slide-right" data-aos-once="true" data-aos-duration="1500">
@@ -72,8 +75,9 @@
         </div>
         <!--./header__contentContainer-->
     </header>
-    <main class="innerWrapper">
-        <section class="aboutMe" id="aboutSection">
+    <main class="innerWrapper" id="mainContent">
+        <section class="aboutMe" id="aboutSection" data-aos="fade" data-aos-once="true" data-aos-duration="1500"
+            data-aos-anchor-placement="top-center">
             <h2>About me</h2>
             <div class="flexContainer">
                 <div class="aboutMe__text">
@@ -96,7 +100,8 @@
                         aria-hidden="true"></i></button>
             </div>
         </section>
-        <section class="skills" id="skillsSection">
+        <section class="skills" id="skillsSection" data-aos="fade" data-aos-once="true" data-aos-duration="1500"
+            data-aos-anchor-placement="top-center">
             <h2>What I can do</h2>
             <ul>
                 <li>
@@ -212,11 +217,11 @@
             <form method="POST" action="http://www.focuspocus.io/magic/6212d57f934dfdf6ae8539ebe604ed6d">
                 <h2>Get in touch</h2>
                 <div class="formGroup">
-                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <input name="name" type="text" id="name" placeholder="Enter your name" required>
                     <label for="name">Enter your name</label>
                 </div>
                 <div class="formGroup">
-                    <input type="email" id="email" placeholder="Enter email address" required>
+                    <input name="email" type="email" id="email" placeholder="Enter email address" required>
                     <label for="email">Enter email address</label>
                 </div>
                 <div class="formGroup">

@@ -1,33 +1,28 @@
 header {
     height: 95vh;
     margin-bottom: 5vh;
-    display: flex;
     position: relative;
 
     .header__imgContainer {
-        align-self: flex-end;
-        margin-left: 12rem;
-        margin-bottom: 6.5rem;
         filter: saturate(65%);
         width: 500px;
+        position: absolute;
+        left: 12rem;
+        top: 17rem;
     }
 
     .header__contentContainer {
         border: 15px solid $black;
-        width: 50%;
         border-top: none;
-        position: absolute;
+        margin-right: 12rem;
+        margin-left: 525px;
+        padding-top: 17rem;
+        padding-left: 125px;
+        padding-right: 125px;
         height: 100%;
-        left: calc(500px + 3.5rem);
-        display: flex;
-        align-items: flex-end;
     }
 
     .textContainer {
-        height: 500px;
-        margin-bottom: 5rem;
-        padding-left: 12rem;
-        padding-right: 10rem;
 
         span {
             display: block;
@@ -41,19 +36,48 @@ header {
 
 .hamburger {
     position: fixed;
-    right: 0;
+    right: calc(2.5% - 15px);
     top: 0;
     z-index: 20;
 }
 
 .mainNav {
-    display: none;
-    transition: display .3s;
     position: fixed;
     z-index: 15;
-    top: 0;
+    top: -105vh;
     left: 0;
-    min-width: 100vw;
+    width: 100vw;
     height: 100vh;
     background: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: all .5s;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        a {
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid transparent;
+            display: inline-block;
+            transition: all 0.3s;
+
+            &:hover,
+            &:focus {
+                border-bottom: 3px solid $black;
+            }
+        }
+    }
+}
+
+.mainNav.isDisplayed {
+    top: 0;
+    opacity: 1;
 }

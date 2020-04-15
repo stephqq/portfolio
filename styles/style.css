@@ -207,12 +207,14 @@ body {
   max-width: 1440px;
   width: 95%;
   margin: 0 auto;
+  border: 1px solid palevioletred;
 }
 
 .innerWrapper {
   max-width: calc(1440px / 2);
   width: 50%;
   margin: 0 auto;
+  border: 1px solid bisque;
 }
 
 button:not(.hamburger),
@@ -224,11 +226,58 @@ button:not(.hamburger),
   font-size: 1.4rem;
   font-weight: 600;
   padding-bottom: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 button:not(.hamburger) i,
 .likeAButton i {
   padding-left: 7px;
+}
+
+button:not(.hamburger):hover i,
+button:not(.hamburger):focus i,
+.likeAButton:hover i,
+.likeAButton:focus i {
+  -webkit-animation: 2s ease-in .2s infinite activeState;
+          animation: 2s ease-in .2s infinite activeState;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
+@-webkit-keyframes activeState {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes activeState {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -287,42 +336,27 @@ footer p {
 header {
   height: 95vh;
   margin-bottom: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
 }
 
 header .header__imgContainer {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-left: 12rem;
-  margin-bottom: 6.5rem;
   -webkit-filter: saturate(65%);
           filter: saturate(65%);
   width: 500px;
+  position: absolute;
+  left: 12rem;
+  top: 17rem;
 }
 
 header .header__contentContainer {
   border: 15px solid #29292b;
-  width: 50%;
   border-top: none;
-  position: absolute;
+  margin-right: 12rem;
+  margin-left: 525px;
+  padding-top: 17rem;
+  padding-left: 125px;
+  padding-right: 125px;
   height: 100%;
-  left: calc(500px + 3.5rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-header .textContainer {
-  height: 500px;
-  margin-bottom: 5rem;
-  padding-left: 12rem;
-  padding-right: 10rem;
 }
 
 header .textContainer span {
@@ -335,22 +369,60 @@ header .textContainer button:not(:first-of-type) {
 
 .hamburger {
   position: fixed;
-  right: 0;
+  right: calc(2.5% - 15px);
   top: 0;
   z-index: 20;
 }
 
 .mainNav {
-  display: none;
-  -webkit-transition: display .3s;
-  transition: display .3s;
   position: fixed;
   z-index: 15;
-  top: 0;
+  top: -105vh;
   left: 0;
-  min-width: 100vw;
+  width: 100vw;
   height: 100vh;
   background: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.mainNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.mainNav ul a {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mainNav ul a:hover, .mainNav ul a:focus {
+  border-bottom: 3px solid #29292b;
+}
+
+.mainNav.isDisplayed {
+  top: 0;
+  opacity: 1;
 }
 
 .aboutMe {
@@ -426,9 +498,7 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .skills li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(100% / 5);
-          flex: 0 1 calc(100% / 5);
+  width: calc(100% / 5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +526,7 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .skills p {
-  margin-top: 10px;
+  margin: 1rem 0;
   opacity: 0;
 }
 

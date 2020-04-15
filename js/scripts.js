@@ -24,6 +24,7 @@ cv.init = () => {
 cv.getDOM = () => {
     cv.menu = document.querySelector('.hamburger');
     cv.navigation = document.querySelector('.mainNav');
+    cv.navLinks = document.querySelectorAll('.mainNav a');
     cv.resume = document.querySelectorAll('.resume');
     cv.contact = document.querySelector('.contactButton');
     cv.contactSection = document.querySelector('#contactSection');
@@ -37,16 +38,15 @@ cv.getDOM = () => {
 cv.listenUp = () => {
     cv.menu.addEventListener('click', () => {
         cv.menu.classList.toggle('is-active');
-        
-        // this needs to be redone, navigation is currently not working
-        // if (cv.navigation.style.display === 'none' || !cv.navigation.style.display) {
-        //     console.log('set to none, now set to block');
-        //     cv.navigation.style.display = 'block';
-        // } else {
-        //     console.log('else, set to none');
-        //     cv.navigation.style.display = 'none';
-        // }
+        cv.navigation.classList.toggle('isDisplayed');
     });
+
+    for (let i = 0; i < cv.navLinks.length; i++) {
+        cv.navLinks[i].addEventListener('click', () => {
+            cv.menu.classList.toggle('is-active');
+            cv.navigation.classList.toggle('isDisplayed');
+        })
+    }
 
     for (let i = 0; i < cv.resume.length; i++) {
         cv.resume[i].addEventListener('click', () => {
