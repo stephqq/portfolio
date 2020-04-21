@@ -31,6 +31,46 @@ header {
     }
 }
 
+@media (max-width: 940px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    header {
+        h2 {
+            font-size: 3.5rem;
+        }
+    
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    header {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    header {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
 section {
     h2 {
         font-size: 4rem;

@@ -7,23 +7,22 @@ header {
         filter: saturate(65%);
         width: 500px;
         position: absolute;
-        left: 12rem;
-        top: 17rem;
+        left: 9%; //12rem
+        top: 17rem; //no %
     }
 
     .header__contentContainer {
         border: 15px solid $black;
         border-top: none;
-        margin-right: 12rem;
-        margin-left: 525px;
-        padding-top: 17rem;
-        padding-left: 125px;
-        padding-right: 125px;
+        margin-right: 9%; //12rem
+        margin-left: 38%; //525px
+        padding-top: 17rem; //no %
+        padding-left: 9%; //125px
+        padding-right: 9%; //125px
         height: 100%;
     }
 
     .textContainer {
-
         span {
             display: block;
         }
@@ -80,4 +79,73 @@ header {
 .mainNav.isDisplayed {
     top: 0;
     opacity: 1;
+}
+
+@media (max-width: 1220px) {
+    header {
+        .header__imgContainer {
+            width: 400px;
+            top: 22rem; //no %
+        }
+    
+        .header__contentContainer {
+            padding-top: 22rem; //no %
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    header {
+        .header__imgContainer {
+            left: 6%; //12rem
+        }
+    
+        .header__contentContainer {
+            margin-right: 6%; //12rem
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+    header {
+        .header__imgContainer {
+            width: 300px;
+            left: 6%;
+        }
+    
+        .header__contentContainer {
+            margin-right: 6%;
+            margin-left: 35%;
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    header {
+        .header__contentContainer {
+            margin-left: 35%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        .header__imgContainer {
+            width: 225px;
+            top: 1.5rem; //no %
+            left: 0;
+        }
+    
+        .header__contentContainer {
+            padding-top: 240px;
+            margin-right: 8%;
+            margin-left: 8%;
+        }
+    }
 }

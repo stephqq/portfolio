@@ -311,6 +311,36 @@ header h3 {
   font-size: 1.8rem;
 }
 
+@media (max-width: 940px) {
+  h1 {
+    font-size: 5rem;
+  }
+  header h2 {
+    font-size: 3.5rem;
+  }
+  header h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 810px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  header h2 {
+    font-size: 2.5rem;
+  }
+}
+
 section h2 {
   font-size: 4rem;
   margin-bottom: 4.5rem;
@@ -344,18 +374,18 @@ header .header__imgContainer {
           filter: saturate(65%);
   width: 500px;
   position: absolute;
-  left: 12rem;
+  left: 9%;
   top: 17rem;
 }
 
 header .header__contentContainer {
   border: 15px solid #29292b;
   border-top: none;
-  margin-right: 12rem;
-  margin-left: 525px;
+  margin-right: 9%;
+  margin-left: 38%;
   padding-top: 17rem;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 9%;
+  padding-right: 9%;
   height: 100%;
 }
 
@@ -423,6 +453,61 @@ header .textContainer button:not(:first-of-type) {
 .mainNav.isDisplayed {
   top: 0;
   opacity: 1;
+}
+
+@media (max-width: 1220px) {
+  header .header__imgContainer {
+    width: 400px;
+    top: 22rem;
+  }
+  header .header__contentContainer {
+    padding-top: 22rem;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (max-width: 1170px) {
+  header .header__imgContainer {
+    left: 6%;
+  }
+  header .header__contentContainer {
+    margin-right: 6%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 940px) {
+  header .header__imgContainer {
+    width: 300px;
+    left: 6%;
+  }
+  header .header__contentContainer {
+    margin-right: 6%;
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 810px) {
+  header .header__contentContainer {
+    margin-left: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  header .header__imgContainer {
+    width: 225px;
+    top: 1.5rem;
+    left: 0;
+  }
+  header .header__contentContainer {
+    padding-top: 240px;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
 }
 
 .aboutMe {
