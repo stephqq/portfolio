@@ -17,3 +17,25 @@ footer {
         }
     }
 }
+
+@media (max-width: 520px) {
+    footer {
+        section {
+            border: 10px solid $black;
+            border-bottom: none;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        ul {
+            font-size: 3rem;
+        }
+
+        a:hover,
+        a:focus {
+            color: $gray;
+        }
+    }
+}

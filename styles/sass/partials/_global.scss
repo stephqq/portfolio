@@ -31,18 +31,45 @@ body {
     color: $black;
 }
 
+@media (max-width: 430px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+
 .outerWrapper {
     max-width: 1440px;
     width: 95%;
     margin: 0 auto;
-    border: 1px solid palevioletred;
 }
 
 .innerWrapper {
-    max-width: calc(1440px / 2);
-    width: 50%;
+    width: 65%;
     margin: 0 auto;
-    border: 1px solid bisque;
+}
+
+@media (max-width: 875px) {
+    .innerWrapper {
+        width: 70%;
+    }
+}
+
+@media (max-width: 680px) {
+    .innerWrapper {
+        width: 80%;
+    }
+}
+
+@media (max-width: 590px) {
+    .innerWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .innerWrapper {
+        width: 90%;
+    }
 }
 
 button:not(.hamburger),

@@ -1,5 +1,5 @@
 .skills {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         &:hover p,
         &:hover .svgFill,
@@ -42,5 +42,30 @@
 
     .svgFill {
         fill: $gray;
+    }
+}
+
+@media (max-width: 800px) {
+    .skills {
+        li {
+            width: calc(100% / 3);
+        }
+
+        li:last-of-type {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .skills {
+        svg, i {
+            font-size: 6rem;
+        }
+
+        svg {
+            width: 60px;
+            height: 60px;
+        }
     }
 }

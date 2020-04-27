@@ -7,7 +7,7 @@ header {
         filter: saturate(65%);
         width: 500px;
         position: absolute;
-        left: 9%; //12rem
+        left: 6%; //12rem
         top: 17rem; //no %
     }
 
@@ -136,16 +136,75 @@ header {
 
 @media (max-width: 700px) {
     header {
+        height: 90vh;
+        margin-bottom: 10vh;
+
         .header__imgContainer {
-            width: 225px;
-            top: 1.5rem; //no %
-            left: 0;
+            display: none;
         }
     
         .header__contentContainer {
-            padding-top: 240px;
+            padding-left: 10%;
+            padding-right: 10%;
             margin-right: 8%;
             margin-left: 8%;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        .header__contentContainer {
+            padding-left: 5%;
+            padding-right: 5%;
+            border: 10px solid $black;
+            border-top: none;
+            margin-right: 10%;
+            margin-left: 10%;
+        }
+
+        .textContainer {
+            button:not(:first-of-type) {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    header {
+        .header__contentContainer {
+            padding-left: 8%;
+            padding-right: 8%;
+            margin-right: 2.5%;
+            margin-left: 2.5%;
+        }
+
+        .textContainer {
+            button:not(:first-of-type) {
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    .hamburger {
+        right: 4%;
+    }
+}
+
+@media (max-width: 390px) {
+    header {
+        .header__contentContainer {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .textContainer {
+            button:not(:first-of-type) {
+                display: block;
+                margin-left: 0;
+                margin-top: 3rem;
+            }
         }
     }
 }

@@ -1,16 +1,18 @@
 .contactForm {
-    height: 80vh;
+    min-height: 85vh;
     @include flexCenter;
+    border: 1px solid lime;
 
     form {
         width: 100%;
+        border: 1px solid red;
     }
 
     input, textarea {
         width: 100%;
         border: none;
         border-bottom: 2px solid $black;
-        color: inherit;
+        color: $gray;
         font-family: inherit;
         transition: all .3s;
         padding: 15px 0;
@@ -18,7 +20,7 @@
 
         &::placeholder {
             opacity: 1;
-            color: $black;
+            color: $gray;
         }
 
         &:required {
