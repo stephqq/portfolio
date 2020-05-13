@@ -108,7 +108,7 @@ button:not(.hamburger),
 
 @keyframes activeState {
     0% {
-        opacity: 0;
+        opacity: 0.5;
     }
 
     50% {
@@ -116,6 +116,6 @@ button:not(.hamburger),
     }
 
     100% {
-        opacity: 0;
+        opacity: 0.5;
     }
 }

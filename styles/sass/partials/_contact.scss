@@ -1,11 +1,9 @@
 .contactForm {
     min-height: 85vh;
     @include flexCenter;
-    border: 1px solid lime;
 
     form {
         width: 100%;
-        border: 1px solid red;
     }
 
     input, textarea {

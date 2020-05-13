@@ -285,30 +285,30 @@ button:not(.hamburger):focus i,
 
 @-webkit-keyframes activeState {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 
 @keyframes activeState {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond", serif;
 }
 
 h1 {
@@ -395,7 +395,7 @@ section h2 {
 }
 
 section h3 {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
 }
 
 section blockquote {
@@ -809,48 +809,51 @@ header .textContainer button:not(:first-of-type) {
 }
 
 .portfolio {
-  height: 80vh;
+  min-height: 70vh;
   margin-bottom: 10vh;
   margin-top: 10vh;
   position: relative;
+  border: 1px solid red;
 }
 
 .portfolio__contentContainer {
   border: 15px solid #29292b;
-  width: 950px;
-  height: 500px;
+  border-left: none;
+  width: 100%;
+  height: 70%;
   position: absolute;
   bottom: 0;
-  left: -400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  left: -31.5%;
 }
 
 .portfolio__textContainer {
-  width: 675px;
-  padding-right: 161px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 32%;
+  height: 100%;
 }
 
 .portfolio__textContainer p {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
-.portfolio__textContainer a:last-of-type {
-  margin-left: 30px;
+.portfolio__textContainer div a:last-of-type {
+  margin-left: 3rem;
 }
 
 .portfolio__imgContainer {
   position: absolute;
   z-index: 10;
   max-width: 500px;
-  top: 50px;
+  top: 0;
   right: -190px;
 }
 
@@ -879,6 +882,12 @@ header .textContainer button:not(:first-of-type) {
 
 .portfolio ul.tags li:not(:first-of-type) {
   margin-left: 20px;
+}
+
+.portfolio nav {
+  position: absolute;
+  right: 0;
+  bottom: -3.5rem;
 }
 
 .portfolio nav ul {
@@ -916,12 +925,10 @@ header .textContainer button:not(:first-of-type) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid lime;
 }
 
 .contactForm form {
   width: 100%;
-  border: 1px solid red;
 }
 
 .contactForm input, .contactForm textarea {

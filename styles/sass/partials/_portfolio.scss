@@ -1,31 +1,35 @@
 .portfolio {
-    height: 80vh;
+    min-height: 70vh;
     margin-bottom: 10vh;
     margin-top: 10vh;
     position: relative;
+    border: 1px solid red;
 
     &__contentContainer {
         border: 15px solid $black;
-        width: 950px;
-        height: 500px;
+        border-left: none;
+        width: 100%; //950px
+        height: 70%; //500px
         position: absolute;
         bottom: 0;
-        left: -400px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        left: -31.5%; //-400px
     }
 
     &__textContainer {
-        width: 675px;
-        padding-right: 161px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 32%;
+        height: 100%;
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
-        a:last-of-type {
-            margin-left: 30px;
+        div {
+            a:last-of-type {
+                margin-left: 3rem;
+            }
         }
     }
 
@@ -33,7 +37,7 @@
         position: absolute;
         z-index: 10;
         max-width: 500px;
-        top: 50px;
+        top: 0;
         right: -190px;
         
         img {
@@ -61,6 +65,10 @@
     }
 
     nav {
+        position: absolute;
+        right: 0;
+        bottom: -3.5rem;
+
         ul {
             display: flex;
 
