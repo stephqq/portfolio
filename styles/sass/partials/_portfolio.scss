@@ -3,7 +3,6 @@
     margin-bottom: 10vh;
     margin-top: 10vh;
     position: relative;
-    border: 1px solid red;
 
     &__contentContainer {
         border: 15px solid $black;
@@ -20,6 +19,7 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 32%;
+        padding-right: 5%;
         height: 100%;
 
         p {
@@ -38,7 +38,7 @@
         z-index: 10;
         max-width: 500px;
         top: 0;
-        right: -190px;
+        right: -18%;
         
         img {
             filter: drop-shadow(5px 5px 5px $gray);
@@ -59,8 +59,8 @@
             padding: 0 5px;
         }
 
-        li:not(:first-of-type) {
-            margin-left: 20px;
+        li:not(:last-of-type) {
+            margin-right: 20px;
         }
     }
 

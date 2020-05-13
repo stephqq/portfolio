@@ -813,7 +813,6 @@ header .textContainer button:not(:first-of-type) {
   margin-bottom: 10vh;
   margin-top: 10vh;
   position: relative;
-  border: 1px solid red;
 }
 
 .portfolio__contentContainer {
@@ -838,6 +837,7 @@ header .textContainer button:not(:first-of-type) {
       -ms-flex-pack: center;
           justify-content: center;
   padding-left: 32%;
+  padding-right: 5%;
   height: 100%;
 }
 
@@ -854,7 +854,7 @@ header .textContainer button:not(:first-of-type) {
   z-index: 10;
   max-width: 500px;
   top: 0;
-  right: -190px;
+  right: -18%;
 }
 
 .portfolio__imgContainer img {
@@ -880,8 +880,8 @@ header .textContainer button:not(:first-of-type) {
   padding: 0 5px;
 }
 
-.portfolio ul.tags li:not(:first-of-type) {
-  margin-left: 20px;
+.portfolio ul.tags li:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .portfolio nav {

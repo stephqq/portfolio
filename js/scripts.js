@@ -32,7 +32,7 @@ cv.getDOM = () => {
     cv.portfolioSection = document.querySelector('#portfolioSection');
     cv.projects = document.querySelectorAll('.toggleProject');
     cv.projectText = document.querySelector('.portfolio__textContainer');
-    cv.projectImage = document.querySelector('.portfolio__imgContainer');
+    cv.projectImage = document.querySelector('.portfolio__imgContainer div');
 }
 
 cv.listenUp = () => {
@@ -97,10 +97,12 @@ cv.toggleProject = (e) => {
                 30 seconds.</p>
             <p>jQuery was used to manipulate the DOM and Firebase was used to provide a real-time
                 leaderboard.</p>
+            <div>
             <a href="https://github.com/stephqq/kittyClicker" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://stephqq.github.io/kittyClicker/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">view live <i class="fas fa-paw" aria-hidden="true"></i></a>
+            </div>
             `;
         cv.projectImage.innerHTML = 
             `
@@ -130,10 +132,12 @@ cv.toggleProject = (e) => {
             </ul>
             <p>A SPA built in React with CRUD functionality, Think Mindful allows the user to keep a thought record journal for therapy. </p>
             <p>Firebase was used for authentication and a real-time database.</p>
+            <div>
             <a href="https://github.com/stephqq/thinkMindful" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://stephqq.github.io/thinkMindful/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">view live <i class="fas fa-paper-plane" aria-hidden="true"></i></a>
+            </div>
             `;
         cv.projectImage.innerHTML = 
             `
@@ -165,10 +169,12 @@ cv.toggleProject = (e) => {
             </ul>
             <p>Built to meet a client brief as a mob programming project, this app utilizes a REST API to allow users to search for ethical cosmetic products that meet a specific query.</p>
             <p>Users are able to view product details, read and write reviews, as well as add products to a wishlist.</p>
+            <div>
             <a href="https://github.com/ethicalMakeupC25/project6" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://ethicalmakeupc25.github.io/project6/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">view live <i class="fas fa-hand-holding-heart" aria-hidden="true"></i></a>
+            </div>
             `;
         cv.projectImage.innerHTML = 
             `
@@ -199,10 +205,12 @@ cv.toggleProject = (e) => {
             </ul>
             <p>From a pair programming project, The Elephant Quiz is quite literal: an interactive quiz on famous elephants from Wikipedia.</p>
             <p>This single page application utilizes a REST API for data and was built with jQuery.</p>
+            <div>
             <a href="https://github.com/cecile-stephanie/elephantQuiz/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://cecile-stephanie.github.io/elephantQuiz/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">view live <i class="fas fa-tasks" aria-hidden="true"></i></a>
+            </div>
             `;
         cv.projectImage.innerHTML = 
             `
@@ -229,10 +237,12 @@ cv.toggleProject = (e) => {
                 <li>Sass</li>
             </ul>
             <p>A pixel perfect personal multi-page website developed from a PSD design.</p>
+            <div>
             <a href="https://github.com/stephqq/stephanie-kerr-project-two/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">github repo <i class="fab fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://stephqq.github.io/stephanie-kerr-project-two/" class="likeAButton" target="_blank"
                 rel="noopener noreferrer">view live <i class="fas fa-leaf" aria-hidden="true"></i></a>
+            </div>
             `;
         cv.projectImage.innerHTML = 
             `
